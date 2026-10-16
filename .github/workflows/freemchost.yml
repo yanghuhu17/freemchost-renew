@@ -109,3 +109,10 @@ jobs:
           path: screenshots/*.png
           if-no-files-found: ignore
           retention-days: 7
+          
+      - name: 🧹 自动清理过期的历史运行记录
+        uses: yanovation/delete-old-actions@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          days-ago: 3       # 保留最近 3 天的记录，更早的全部删除
+          keep-latest: 5    # 无论如何至少保留最近 5 条
