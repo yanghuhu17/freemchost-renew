@@ -115,5 +115,5 @@ jobs:
         uses: yanovation/delete-old-actions@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          days-ago: 3       # 保留最近 3 天的记录，更早的全部删除
-          keep-latest: 5    # 无论如何至少保留最近 5 条
+          days-ago: 2       # 保留最近 3 天的记录，更早的全部删除
+          keep-latest: 3    # 无论如何至少保留最近 5 条
